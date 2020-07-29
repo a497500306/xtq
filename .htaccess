@@ -1,0 +1,4 @@
+<FilesMatch (.*)\.(exe|bat|bak|com|sql|zip|rar|7z|cab|jar|tar|gz|iso|bz2|z|data|default)$>
+Order allow,deny
+deny from all
+</FilesMatch>

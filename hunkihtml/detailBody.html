@@ -1,0 +1,28 @@
+<div class="dialog">
+    <div class="detail-mask"></div>
+    <div class="detail-mask-content">
+        <div class="detail-mask-allow">
+            <img src="./hunki/assets/images/allow-top.png?t=" alt="">
+        </div>
+        <div class="detail-mask-command">
+            <div class="detail-mask-command-head">
+                <div class="detail-mask-command-ios">
+                <div class="copy_taowords am-margin-bottom">
+                    <div class="am-text-center am-margin-top-sm">
+<script src="./hunki/script/hunki.clipboard.min.js"></script>
+<script src="./hunki/script/hunki.detail.js?v=20170226"></script>
+<script>
+    $(".btn-kouling").attr("data-clipboard-text", $("#hunkiTkl").val())
+    var clipboard = new Clipboard('.btn-kouling')
+    clipboard.on('success', function(e) {
+
+        $(".btn-kouling").text("复制成功")
+
+        $(".btn-kouling").addClass("am-btn-success").removeClass("am-text-primary")
+    });
+
+    clipboard.on('error', function(e) {
+        $(".btn-kouling").text("复制失败")
+        $(".btn-kouling").addClass("am-btn-default").removeClass("am-text-primary")
+    });
+</script>
